@@ -1,17 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Wallet from "./Wallet";
+import Loot from "./Loot";
 
-class App extends Component {
-  state = {};
-  render() {
-    return (
-      <div>
-        <h3>Loot Check</h3>
-        <Wallet />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <h3>Loot Check</h3>
+      <Wallet />
+      <hr />
+      <Loot />
+    </div>
+  );
+};
 
 export default App;
