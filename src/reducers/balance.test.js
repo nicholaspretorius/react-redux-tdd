@@ -10,4 +10,20 @@ describe("balanceReducer", () => {
   it("sets an empty balance if action provided", () => {
     expect(balanceReducer(undefined, {})).toEqual(0);
   });
+
+  it("deposits the amount into the balance", () => {
+    const initialBalance = 5;
+    const deposit = 10;
+    expect(balanceReducer(initialBalance, { type: constants.DEPOSIT, deposit })).toEqual(
+      initialBalance + deposit
+    );
+  });
+
+  it("withdraws the amount from the balance", () => {
+    const initialBalance = 20;
+    const withdrawal = 10;
+    expect(balanceReducer(initialBalance, { type: constants.WITHDRAW, withdrawal })).toEqual(
+      initialBalance - withdrawal
+    );
+  });
 });

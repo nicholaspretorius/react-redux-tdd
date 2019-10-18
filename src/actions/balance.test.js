@@ -8,4 +8,18 @@ describe("balance", () => {
 
     expect(actions.setBalance(balance)).toEqual(action);
   });
+
+  it("creates an action to deposit into the balance", () => {
+    const deposit = 10;
+    const action = { type: constants.DEPOSIT, deposit };
+
+    expect(actions.deposit(deposit)).toEqual(action);
+  });
+
+  it("creates an action to withdraw from the balance", () => {
+    const withdrawal = 10;
+    const action = { type: constants.WITHDRAW, withdrawal };
+
+    expect(actions.withdraw(withdrawal)).toEqual(action);
+  });
 });
