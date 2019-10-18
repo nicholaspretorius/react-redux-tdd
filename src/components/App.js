@@ -10,6 +10,14 @@ const App = () => {
       <Wallet />
       <hr />
       <Loot />
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.coindesk.com/price"
+        className="coindesk"
+      >
+        Powered By CoinDesk
+      </a>
     </div>
   );
 };
