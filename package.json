@@ -5,7 +5,10 @@
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-redux": "^7.1.1",
+    "react-scripts": "3.2.0",
+    "redux": "^4.0.4",
+    "sfcookies": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,6 +29,18 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/**/*.js",
+      "!**/src/index.js",
+      "!**/src/setupTests.js",
+      "!**/src/tempPolyfills.js"
     ]
   }
 }
