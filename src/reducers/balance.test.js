@@ -1,14 +1,24 @@
 import balanceReducer from "./balance";
+import balanceReducer2 from "./balance";
 import * as constants from "./../actions/constants";
 
 describe("balanceReducer", () => {
-  it("sets a balance", () => {
+  describe("when initialising", () => {
     const balance = 10;
-    expect(balanceReducer(undefined, { type: constants.SET_BALANCE, balance })).toEqual(balance);
-  });
 
-  it("sets an empty balance if action provided", () => {
-    expect(balanceReducer(undefined, {})).toEqual(0);
+    it("sets a balance", () => {
+      expect(balanceReducer(undefined, { type: constants.SET_BALANCE, balance })).toEqual(balance);
+    });
+
+    xit("sets an empty balance if no action provided", () => {
+      expect(balanceReducer(undefined, {})).toEqual(0);
+    });
+
+    describe("when re-initiallising", () => {
+      it("reads the balance from cookies", () => {
+        expect(balanceReducer2(undefined, {})).toEqual(balance);
+      });
+    });
   });
 
   it("deposits the amount into the balance", () => {
