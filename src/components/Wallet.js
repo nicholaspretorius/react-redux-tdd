@@ -44,9 +44,10 @@ export class Wallet extends Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({ balance, bitcoin }) {
   return {
-    balance: state
+    balance,
+    bitcoin
   };
 }
 
